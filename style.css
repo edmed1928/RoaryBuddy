@@ -1,0 +1,56 @@
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.top-container {
+  font-weight: BOLD;
+  background-color: white;
+  color: #08133F;
+  text-align: 10px;
+  margin: 16px;
+  padding:
+  
+}
+.header {
+  position: sticky;
+  top: 0;
+  padding: 10px 16px;
+  background: #08133F;
+  color: white;
+
+}
+
+button {
+  float:right;
+}
+
+.loginButton  {
+  border: none;
+  background-color: orange;
+  padding: 12px 48px 12px 24px;
+  border-radius: 20px;
+  color: #fff;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='7.41' height='12' viewBox='0 0 7.41 12'%3E%3Cpath d='M10,6,8.59,7.41,13.17,12,8.59,16.59,10,18l6-6Z' transform='translate(-8.59 -6)' fill='%23fff'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 24px center;
+}
+
+.loginButton button:hover {
+  background-color: #3e8e41;
+}
+
+.content {
+  padding: 16px;
+}
+
+.illustration {
+  max-width: 50%;
+  max-height: var(--image-max-width);
+  margin-top: var(--image-margin);
+  
+}
+
+.illustration:active {
+  transform: translateY(5px);
+}
