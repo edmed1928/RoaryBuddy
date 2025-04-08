@@ -46,7 +46,7 @@
   <div class="modal-content">
     <span class="close">&times;</span>
     <h2>Login</h2>
-    <form id="loginForm" action="login_process.php" method="post">
+    <form id ="loginForm" action="includes/formhandler_login.inc.php" method="POST">
       <div class="form-group">
         <label for="username">Username:</label>
         <input type="text" id="username" name="username" required>
@@ -66,7 +66,7 @@
   <div class="modal-content">
     <span class="close">&times;</span>
     <h2>Sign Up</h2>
-    <form id="signupForm" action="signup_process.php" method="post">
+    <form id="signupForm" action="includes/formhandler_signup.inc.php" method="POST">
       <div class="form-group">
         <label for="signupUsername">Username:</label>
         <input type="text" id="signupUsername" name="username" required>
