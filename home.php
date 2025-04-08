@@ -21,7 +21,7 @@
           <a href="home.html" class="navbar__links">Home</a>
         </li>
         <li class="navbar__btn">
-          <a href="login.html" class="loginButton">Login</a>
+          <a href="login.php" class="loginButton">Login</a>
         </li>
        </ul>
     </div>

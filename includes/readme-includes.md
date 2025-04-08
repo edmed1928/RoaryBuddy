@@ -1,0 +1,1 @@
+Everything within the includes folder is for PHP code that interacts with the database. 
