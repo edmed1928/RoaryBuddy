@@ -39,6 +39,18 @@ body {
   transform: translateX(-100px);
 }
 
+.navbar__brand a {
+  display: flex;
+  align-items: center;
+  text-decoration: none; /* Removes the underline from links */
+  outline: none; /* Removes the focus outline */
+}
+
+
+.navbar__brand a:focus {
+  outline: none; /* Ensures no outline appears when focused */
+}
+
 .navbar__menu {
   display: flex;
   align-items: center;
@@ -68,6 +80,7 @@ body {
 
 #appTitle {
   margin-left: -65px; /* Remove large negative margin */
+  margin-top: 5px;
 }
 
 .navbar__links {
@@ -190,7 +203,6 @@ body {
   justify-content: center;
   text-align: center;
   position: relative;
-  margin-top: 80px; /* Ensure it's pushed below navbar */
 }
 
 .hero::after {
@@ -222,4 +234,58 @@ body {
   font-size: 1.2rem;
   margin-bottom: 2rem;
   color: #ddd;
+}
+
+/* Modal styles */
+.modal {
+  display: none; 
+  position: fixed; 
+  z-index: 1000; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgba(0,0,0,0.4); 
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; 
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  width: 80%;
+  max-width: 400px;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
 }
