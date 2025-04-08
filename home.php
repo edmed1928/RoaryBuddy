@@ -41,7 +41,7 @@
       </div>
     </section>
 
-    <!-- Add this right before the closing body tag -->
+<!-- Login Modal -->
 <div id="loginModal" class="modal">
   <div class="modal-content">
     <span class="close">&times;</span>
@@ -56,7 +56,31 @@
         <input type="password" id="password" name="password" required>
       </div>
       <button type="submit" class="loginButton">Login</button>
-      <p>Don't have an account? <a href="register.php">Sign up</a></p>
+      <p>Don't have an account? <a href="#" id="switchToSignup">Sign up</a></p>
+    </form>
+  </div>
+</div>
+
+<!-- Signup Modal -->
+<div id="signupModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2>Sign Up</h2>
+    <form id="signupForm" action="signup_process.php" method="post">
+      <div class="form-group">
+        <label for="signupUsername">Username:</label>
+        <input type="text" id="signupUsername" name="username" required>
+      </div>
+      <div class="form-group">
+        <label for="signupEmail">Email:</label>
+        <input type="email" id="signupEmail" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="signupPassword">Password:</label>
+        <input type="password" id="signupPassword" name="password" required>
+      </div>
+      <button type="submit" class="loginButton">Sign Up</button>
+      <p>Already have an account? <a href="#" id="switchToLogin">Login</a></p>
     </form>
   </div>
 </div>

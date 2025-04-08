@@ -1,34 +1,37 @@
-const menu = document.querySelector('#mobile-menu');
-const menuLinks = document.querySelector('.navbar__menu');
+// Modal elements
+const loginModal = document.getElementById("loginModal");
+const signupModal = document.getElementById("signupModal");
 
-menu.addEventListener('click', function (){
-    menu.classList.toggle('is-active')
-    menuLinks.classList.toggle('active');
-})
-
-// Get modal elements
-const modal = document.getElementById("loginModal");
-const loginBtns = document.querySelectorAll(".loginButton");
-const closeBtn = document.querySelector(".close");
-
-// Open modal when login button is clicked
-loginBtns.forEach(btn => {
-  btn.addEventListener("click", function(e) {
-    if (!this.closest("form")) { // Only open modal if button is not in the form
-      e.preventDefault();
-      modal.style.display = "block";
-    }
+// Open login modal
+document.querySelectorAll(".loginButton").forEach(btn => {
+  btn.addEventListener("click", (e) => {
+    e.preventDefault();
+    loginModal.style.display = "block";
   });
 });
 
-// Close modal when X is clicked
-closeBtn.addEventListener("click", function() {
-  modal.style.display = "none";
-});
+// Open signup modal from login modal
+document.getElementById("switchToSignup").onclick = () => {
+  loginModal.style.display = "none";
+  signupModal.style.display = "block";
+};
 
-// Close modal when clicking outside of it
-window.addEventListener("click", function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
+// Switch back to login from signup modal
+document.getElementById("switchToLogin").onclick = () => {
+  signupModal.style.display = "none";
+  loginModal.style.display = "block";
+};
+
+// Close modals when clicking outside the modal box
+window.onclick = function (event) {
+  if (event.target === loginModal) loginModal.style.display = "none";
+  if (event.target === signupModal) signupModal.style.display = "none";
+};
+
+// Close modals when clicking the close (×) button
+document.querySelectorAll(".close").forEach(closeBtn => {
+  closeBtn.addEventListener("click", () => {
+    loginModal.style.display = "none";
+    signupModal.style.display = "none";
+  });
 });
