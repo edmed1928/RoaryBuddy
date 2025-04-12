@@ -1,6 +1,15 @@
 // Modal elements
 const loginModal = document.getElementById("loginModal");
 const signupModal = document.getElementById("signupModal");
+const studygroupcreateModal = document.getElementById("studygroupcreateModal");
+
+// Open study group create modal
+document.querySelectorAll(".createStudyGroupButton").forEach(btn => {
+  btn.addEventListener("click", (e) => {
+    e.preventDefault();
+    studygroupcreateModal.style.display = "block";
+  });
+});
 
 // Open login modal
 document.querySelectorAll(".loginButton").forEach(btn => {
@@ -26,6 +35,7 @@ document.getElementById("switchToLogin").onclick = () => {
 window.onclick = function (event) {
   if (event.target === loginModal) loginModal.style.display = "none";
   if (event.target === signupModal) signupModal.style.display = "none";
+  if (event.target === studygroupcreateModal) studygroupcreateModal.style.display = "none";
 };
 
 // Close modals when clicking the close (×) button

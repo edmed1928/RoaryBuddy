@@ -1,5 +1,5 @@
 <?php
-
+//initilizes database connection. 
 $dsn = "mysql:host=localhost;dbname=roarybuddy_db";
 $dbusername = "root";
 $dbpassword = "";

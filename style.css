@@ -35,20 +35,23 @@ body {
 .navbar__brand {
   display: flex;
   align-items: center;
-  gap: 0px; 
+  gap: 0px;
   transform: translateX(-100px);
 }
 
 .navbar__brand a {
   display: flex;
   align-items: center;
-  text-decoration: none; /* Removes the underline from links */
-  outline: none; /* Removes the focus outline */
+  text-decoration: none;
+  /* Removes the underline from links */
+  outline: none;
+  /* Removes the focus outline */
 }
 
 
 .navbar__brand a:focus {
-  outline: none; /* Ensures no outline appears when focused */
+  outline: none;
+  /* Ensures no outline appears when focused */
 }
 
 .navbar__menu {
@@ -69,17 +72,20 @@ body {
 
 #navbar__logo,
 #appTitle {
-  height: 90px; /* Adjust as needed */
+  height: 90px;
+  /* Adjust as needed */
   width: auto;
 }
 
 #navbar__logo {
-  margin-left: 0; /* Remove negative margin */
+  margin-left: 0;
+  /* Remove negative margin */
   cursor: pointer;
 }
 
 #appTitle {
-  margin-left: -65px; /* Remove large negative margin */
+  margin-left: -65px;
+  /* Remove large negative margin */
   margin-top: 5px;
 }
 
@@ -117,6 +123,7 @@ body {
   padding: 10px 24px;
   white-space: nowrap;
 }
+
 
 .loginButton:hover {
   background-color: #081E3F;
@@ -187,17 +194,19 @@ body {
 /* Desktop-specific styles */
 @media screen and (min-width: 961px) {
   .navbar__toggle {
-    display: none; /* Hide the menu button */
+    display: none;
+    /* Hide the menu button */
   }
 }
 
 .hero {
-  background-image: url('images/roarybuddybackground.jpg'); 
+  background-image: url('images/roarybuddybackground.jpg');
   width: 100%;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  min-height: calc(100vh - 80px); /* Subtract navbar height */
+  min-height: calc(100vh - 80px);
+  /* Subtract navbar height */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -238,24 +247,24 @@ body {
 
 /* Modal styles */
 .modal {
-  display: none; 
-  position: fixed; 
-  z-index: 1000; 
+  display: none;
+  position: fixed;
+  z-index: 1000;
   left: 0;
   top: 0;
-  width: 100%; 
-  height: 100%; 
-  overflow: auto; 
-  background-color: rgba(0,0,0,0.4); 
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
   color: white;
 }
 
 .modal-content {
   background-color: #08133F;
-  margin: 15% auto; 
+  margin: 15% auto;
   padding: 20px;
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   width: 80%;
   max-width: 400px;
 }

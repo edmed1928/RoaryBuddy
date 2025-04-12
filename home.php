@@ -48,8 +48,8 @@
     <h2>Login</h2>
     <form id ="loginForm" action="includes/formhandler_login.inc.php" method="POST">
       <div class="form-group">
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="username" required>
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email" required>
       </div>
       <div class="form-group">
         <label for="password">Password:</label>
@@ -67,10 +67,6 @@
     <span class="close">&times;</span>
     <h2>Sign Up</h2>
     <form id="signupForm" action="includes/formhandler_signup.inc.php" method="POST">
-      <div class="form-group">
-        <label for="signupUsername">Username:</label>
-        <input type="text" id="signupUsername" name="username" required>
-      </div>
       <div class="form-group">
         <label for="signupEmail">Email:</label>
         <input type="email" id="signupEmail" name="email" required>

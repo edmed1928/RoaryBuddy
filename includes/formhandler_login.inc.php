@@ -7,8 +7,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     try {
         include_once "dbh.inc.php";
 
-        // Uses the $pdo object from dbh.inc.php
-        $stmt = $pdo->prepare("SELECT user_id, password, role FROM users WHERE email = :email");
+        $stmt = $pdo->prepare("SELECT user_id, username, password, role FROM users WHERE email = :email");
         $stmt->bindParam(':email', $email);
         $stmt->execute();
 
@@ -20,11 +19,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 
             if (password_verify($password, $db_password)) {
-                // Start the session and store user details in session variables
+               
                 session_start();
                 $_SESSION['email'] = $email;
                 $_SESSION['user_id'] = $userid;
-                $_SESSION['role'] = $user_role; // Store the user's role in the session
+                $_SESSION['role'] = $user_role; 
 
                 header("Location: ../dashboard.php");
                 exit();
