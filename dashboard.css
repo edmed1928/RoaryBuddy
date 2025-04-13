@@ -51,17 +51,36 @@
 
 .studygroupcreateButton {
     display: inline-block;
-    text-decoration: none;
-    background-color: #B6862C;
+    background: linear-gradient(135deg, #B6862C, #e6b14c);
     color: #fff;
     font-size: 1rem;
-    font-weight: bold;
-    border-radius: 4px;
-    transition: background-color 0.3s ease;
-    padding: 10px 24px;
-    white-space: nowrap;
-}
+    font-weight: 600;
+    padding: 12px 28px;
+    border: none;
+    border-radius: 30px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
 
+  .button-wrapper {
+    display: flex;
+    justify-content: center;  /* centers horizontally */
+    margin-top: 30px;         /* add space above if needed */
+  }
+  
+  .studygroupcreateButton:hover {
+    background: linear-gradient(135deg, #8b641f, #d99e2e);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+    transform: translateY(-2px);
+  }
+  
+  .studygroupcreateButton:active {
+    transform: translateY(0px);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+  }
+  
 .buttons {
     width: 960px;
     margin: 0 auto;
@@ -87,4 +106,4 @@
     background-color: #081E3F;
     transform: translateY(-2px);
     text-decoration: none;
-  } 
+  }

@@ -35,11 +35,6 @@
       </div>
     </nav>
 
-  <div>
-    <a href="studygroup_create.php"><button>Create a new Study Group</button></a>
-</div>
-
-
       <table class="studentgroup__table">
         <thead>
           <tr>
@@ -68,6 +63,7 @@
                 <input type="hidden" name="group_id" value="<?php echo htmlspecialchars($study_group['group_id']); ?>">
                 <button type="submit" class="action_btn View">View</button>
               </form>
+              
             <?php endif; ?>
                 </div>
                 </td>
@@ -80,7 +76,9 @@
           <?php endif; ?>
         </tbody>
       </table>
-          
+      <div class="button-wrapper">
+      <a href="studygroup_create.php"><button class="studygroupcreateButton">Create a new Study Group</button></a>
+      </div>
   
       <script src="app.js"></script>
   </body>
