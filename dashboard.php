@@ -76,7 +76,6 @@ if (!isset($_SESSION['user_id'])) {
   }
   
 </style>
-    <h1>Welcome to the Dashboard!</h1>
 
     <!-- Dashboard Menu -->
 <div class="dashboard__container">
