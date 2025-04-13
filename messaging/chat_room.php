@@ -41,14 +41,7 @@ if ($stmt) {
     <title>Session Chat Room</title>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="../style.css"/>
-    <style>
-        #chat-box { border: 1px solid #ccc; height: 300px; overflow-y: scroll; padding: 10px; }
-        .message { margin-bottom: 10px; }
-        #file-upload-area { margin: 10px 0; }
-        .file-preview { display: inline-block; margin-right: 10px; }
-        .file-message { background-color: #f0f7ff; padding: 8px; border-radius: 5px; }
-        .file-message a { font-weight: bold; color: #0066cc; }
-    </style>
+    <link rel="stylesheet" href="chatroom.css"/>
 </head>
 <body>
  

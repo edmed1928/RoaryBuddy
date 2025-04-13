@@ -1,0 +1,120 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+  }
+  
+  h2 {
+    text-align: center;
+    color: #081E3F;
+    margin-top: 20px;
+  }
+  
+  p {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  /* Chat box styling */
+  #chat-box {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    border: 2px solid #081E3F;
+    border-radius: 10px;
+    height: 300px;
+    overflow-y: scroll;
+    padding: 15px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Messages */
+  .message {
+    margin-bottom: 12px;
+    padding: 8px 12px;
+    border-radius: 8px;
+    background-color: #f0f7ff;
+    color: #081E3F;
+  }
+  
+  .message.you {
+    background-color: #B6862C;
+    color: white;
+    text-align: right;
+  }
+  
+  /* Chat input */
+  #chat-form {
+    max-width: 800px;
+    margin: 20px auto;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+  }
+  
+  #chat-form input[type="text"] {
+    flex: 1;
+    padding: 10px 15px;
+    border: 2px solid black;
+    border-radius: 999px;
+    font-size: 1rem;
+  }
+  
+  #chat-form input[type="submit"] {
+    background-color: #B6862C;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 999px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+  }
+  
+  #chat-form input[type="submit"]:hover {
+    background-color: #081E3F;
+  }
+  
+  /* File Upload */
+  #file-upload-area {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 15px;
+    background-color: #ffffff;
+    border: 2px dashed #081E3F;
+    border-radius: 10px;
+    text-align: center;
+  }
+  
+  #file-upload-area input[type="file"] {
+    margin-bottom: 10px;
+  }
+  
+  #file-upload-area button {
+    background-color: #B6862C;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 999px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  #file-upload-area button:hover {
+    background-color: #081E3F;
+  }
+  
+  /* Upload status */
+  #upload-status {
+    margin-top: 10px;
+    color: #333;
+  }
+  
+  /* Participant list */
+  strong {
+    color: #B6862C;
+  }
+  
