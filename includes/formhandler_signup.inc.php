@@ -32,7 +32,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $stmt = null;
 
         // Redirect on success
-        header('Location: ../home.php');
+        header('Location: ../login.php');
         exit();
     } catch (PDOException $e) {
         die("Query failed: " . $e->getMessage());
