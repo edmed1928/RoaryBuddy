@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Roary Buddy</title>
+    <link rel="icon" href="images/roarybuddylogo.png" type="image/png">
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>

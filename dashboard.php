@@ -14,6 +14,7 @@ if (!isset($_SESSION['user_id'])) {
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Roary Buddy</title>
+    <link rel="icon" href="images/roarybuddylogo.png" type="image/png">
     <link rel="stylesheet" href="style.css"/>
   </head>
   <body>
@@ -36,37 +37,13 @@ if (!isset($_SESSION['user_id'])) {
             <a href="home.php" class="navbar__links">Home</a>
           </li>
           <li class="navbar__btn">
-            <a href="#" class="loginButton">Login</a>
+            <a href="logout.php" class="loginButton">Logout</a>
           </li>
         </ul>
       </div>
     </nav>
 
 
-    <!-- Navigation Bar -->
-    <nav class="navbar">
-      <div class="navbar__container">
-       <div class="navbar__brand">
-        <a href="home.php">
-          <img src="images/roarybuddylogo.png" id="navbar__logo">
-          <img src="images/roarybuddytext.png" id="appTitle">
-        </a>
-        </div>
-        <div class="navbar__toggle" id="mobile-menu">
-          <span class="bar"></span>
-          <span class="bar"></span>
-          <span class="bar"></span>
-        </div>
-        <ul class="navbar__menu">
-          <li class="navbar__item">
-            <a href="home.php" class="navbar__links">Home</a>
-          </li>
-          <li class="navbar__btn">
-            <a href="#" class="loginButton">Login</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
 <style>
  .dashboard__container {
     display: inline;

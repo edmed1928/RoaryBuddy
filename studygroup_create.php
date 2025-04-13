@@ -15,6 +15,7 @@ if (!isset($_SESSION['user_id'])) {
   <head>
   <meta charset="utf-8">
     <title>Create a Study Group</title>
+    <link rel="icon" href="images/roarybuddylogo.png" type="image/png">
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
