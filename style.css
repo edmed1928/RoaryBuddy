@@ -70,6 +70,18 @@ body {
   width: 100%;
 }
 
+.navbar__username {
+  color: white;
+  font-weight: bold;
+  padding: 8px 16px;
+  border-radius: 20px;
+  margin-left: 10px;
+  display: inline-flex; /* Ensures the username is inline with the other items */
+  align-items: center; /* Centers the content */
+  white-space: nowrap; /* Prevents text from wrapping onto a new line */
+  line-height: 3.3; /* Adjust line-height to ensure proper vertical alignment */
+}
+
 #navbar__logo,
 #appTitle {
   height: 90px;
@@ -299,3 +311,4 @@ body {
   border: 1px solid #ddd;
   border-radius: 4px;
 }
+

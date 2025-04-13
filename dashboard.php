@@ -5,6 +5,8 @@ if (!isset($_SESSION['user_id'])) {
   header("Location: login.php");
   exit();
 }
+
+$username = $_SESSION['username'];  // Get the username from session
 ?>
 
 
@@ -34,7 +36,7 @@ if (!isset($_SESSION['user_id'])) {
         </div>
         <ul class="navbar__menu">
           <li class="navbar__item">
-            <a href="home.php" class="navbar__links">Home</a>
+            <span class="navbar__username">👋 Hello, <?= htmlspecialchars($username) ?></span>
           </li>
           <li class="navbar__btn">
             <a href="logout.php" class="loginButton">Logout</a>
