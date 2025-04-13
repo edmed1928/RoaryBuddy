@@ -1,4 +1,8 @@
+<?php
+$group_id = (int) $_GET['group_id'];
 
+
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -35,38 +39,48 @@
       </div>
     </nav>
 
-
     
-          <?php include "includes/scheduleviewer.inc.php"; ?>
-          <?php if (!empty($scheduled_events)): ?>
-    <table class="studentgroup__table">
-        <thead>
-            <tr>
-                <th>Event Name</th>
-                <th>Description</th>
-                <th>Event Time</th>
-                <th>Actions</th>
-            </tr>
-        </thead>
-        <tbody>
-            <?php foreach ($scheduled_events as $event): ?>
+    <?php include "includes/scheduleviewer.inc.php"; 
+
+    ?>
+
+   
+
+    <form action="studygroup_add_event.php" method="POST">
+        <input type="hidden" name="group_id" value="<?php echo htmlspecialchars($_GET['group_id']); ?>">
+        <button type="submit">Schedule a New Event</button>
+    </form>
+    
+
+    <?php if (!empty($scheduled_events)): ?>
+        <table class="studentgroup__table">
+            <thead>
                 <tr>
-                    <td><?php echo htmlspecialchars($event['event_name']); ?></td>
-                    <td><?php echo htmlspecialchars($event['event_description']); ?></td>
-                    <td><?php echo htmlspecialchars($event['event_time']); ?></td>
-                    <td>
-                    <form action="messaging/chat_room.php" method="GET">
-                    <input type="hidden" name="session_id" value="<?php echo htmlspecialchars($event['session_id']); ?>">
-                    <button type="submit" class="action_btn">Go to Chat Room</button>
-                    </form>
-                    </td>
+                    <th>Event Name</th>
+                    <th>Description</th>
+                    <th>Event Time</th>
+                    <th>Actions</th>
                 </tr>
-            <?php endforeach; ?>
-        </tbody>
-    </table>
-<?php else: ?>
-    <p>No scheduled events for this group.</p>
-<?php endif; ?>
+            </thead>
+            <tbody>
+                <?php foreach ($scheduled_events as $event): ?>
+                    <tr>
+                        <td><?php echo htmlspecialchars($event['event_name']); ?></td>
+                        <td><?php echo htmlspecialchars($event['event_description']); ?></td>
+                        <td><?php echo htmlspecialchars($event['event_time']); ?></td>
+                        <td>
+                            <form action="messaging/chat_room.php" method="GET">
+                                <input type="hidden" name="session_id" value="<?php echo htmlspecialchars($event['session_id']); ?>">
+                                <button type="submit" class="action_btn">Go to Chat Room</button>
+                            </form>
+                        </td>
+                    </tr>
+                <?php endforeach; ?>
+            </tbody>
+        </table>
+    <?php else: ?>
+        <p>No scheduled events for this group.</p>
+    <?php endif; ?>
           
   
       <script src="app.js"></script>
