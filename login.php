@@ -17,7 +17,7 @@
     <title>Login - RoaryBuddy</title>
  
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="login.css">
  
 
 </head>

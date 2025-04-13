@@ -28,7 +28,7 @@
             <a href="home.php" class="navbar__links">Home</a>
           </li>
           <li class="navbar__btn">
-            <a href="#" class="loginButton">Login</a>
+            <a href="login.php" class="loginButton">Login</a>
           </li>
         </ul>
       </div>
@@ -38,49 +38,10 @@
     <section class="hero">
       <div class="hero__content">
         <h1>Welcome to <img src="images/roarybuddytext.png"></h1>
-        <a href="#" class="loginButton">Get Started</a>
+        <a href="login.php" class="loginButton">Get Started</a>
       </div>
     </section>
 
-<!-- Login Modal -->
-<div id="loginModal" class="modal">
-  <div class="modal-content">
-    <span class="close">&times;</span>
-    <h2>Login</h2>
-    <form id ="loginForm" action="includes/formhandler_login.inc.php" method="POST">
-      <div class="form-group">
-        <label for="email">Email:</label>
-        <input type="text" id="email" name="email" required>
-      </div>
-      <div class="form-group">
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required>
-      </div>
-      <button type="submit" class="loginButton">Login</button>
-      <p>Don't have an account? <a href="#" id="switchToSignup">Sign up</a></p>
-    </form>
-  </div>
-</div>
-
-<!-- Signup Modal -->
-<div id="signupModal" class="modal">
-  <div class="modal-content">
-    <span class="close">&times;</span>
-    <h2>Sign Up</h2>
-    <form id="signupForm" action="includes/formhandler_signup.inc.php" method="POST">
-      <div class="form-group">
-        <label for="signupEmail">Email:</label>
-        <input type="email" id="signupEmail" name="email" required>
-      </div>
-      <div class="form-group">
-        <label for="signupPassword">Password:</label>
-        <input type="password" id="signupPassword" name="password" required>
-      </div>
-      <button type="submit" class="loginButton">Sign Up</button>
-      <p>Already have an account? <a href="#" id="switchToLogin">Login</a></p>
-    </form>
-  </div>
-</div>
 
     <script src="app.js"></script>
   </body>
