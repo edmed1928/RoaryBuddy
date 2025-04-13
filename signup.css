@@ -1,101 +1,121 @@
 /* General Styles */
 body {
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(135deg, #08133F, #B6862C);
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #08133F, #B6862C);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Signup Container */
+.signup-container {
+  background-color: #08133F;
+  padding: 40px 30px;
+  border-radius: 16px;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 450px; /* Set max-width to ensure the form container doesn't stretch too wide */
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+/* Title */
+.signup-container h2 {
+  text-align: center;
+  margin-bottom: 24px;
+  color: white;
+  font-size: 1.8rem;
+}
+
+/* Form Styles */
+.signup-container label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: white;
+  font-size: 1rem;
+  margin-left: 5px;
+  max-width: 100%; /* Ensure labels stay within container */
+  word-wrap: break-word;
+}
+
+/* Inputs and Select */
+.signup-container input,
+.signup-container select {
+  width: 100%;
+  max-width: 100%; /* Ensure input fields don't exceed the container width */
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  transition: border 0.3s ease;
+  font-size: 1rem;
+  box-sizing: border-box; /* Include padding in width calculation */
+}
+
+/* Focus States */
+.signup-container input:focus,
+.signup-container select:focus {
+  outline: none;
+  border-color: #1c92d2;
+}
+
+/* Button */
+.signup-container button {
+  width: 100%;
+  background-color: #B6862C;
+  color: #fff;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.signup-container button:hover {
+  background-color: #081E3F;
+}
+
+/* Link */
+.signup-container p {
+  text-align: center;
+  margin-top: 20px;
+  color: #666;
+}
+
+.signup-container a {
+  color: #1c92d2;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.signup-container a:hover {
+  text-decoration: underline;
+}
+
+.signup-header {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.signup-image {
+  max-width: 500px; /* Your adjusted size */
+  height: auto;
+  margin-right: 10px;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
   }
-  
-  /* Signup Container */
-  .signup-container {
-    background-color: #ffffff;
-    padding: 40px 30px;
-    border-radius: 16px;
-    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 450px;
-    animation: fadeIn 0.6s ease-in-out;
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
-  
-  .signup-container h2 {
-    text-align: center;
-    margin-bottom: 24px;
-    color: #333;
-    font-size: 1.8rem;
-  }
-  
-  /* Form Styles */
-  .signup-container label {
-    display: block;
-    margin-bottom: 6px;
-    font-weight: 600;
-    color: #555;
-  }
-  
-  .signup-container input,
-  .signup-container select {
-    width: 100%;
-    padding: 12px;
-    margin-bottom: 20px;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    background-color: #f9f9f9;
-    transition: border 0.3s ease;
-    font-size: 1rem;
-  }
-  
-  .signup-container input:focus,
-  .signup-container select:focus {
-    outline: none;
-    border-color: #1c92d2;
-  }
-  
-  /* Button */
-  .signup-container button {
-    width: 100%;
-    background-color: #B6862C;
-    color: #fff;
-    padding: 12px;
-    border: none;
-    border-radius: 10px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .signup-container button:hover {
-    background-color: #081E3F;
-  }
-  
-  /* Link */
-  .signup-container p {
-    text-align: center;
-    margin-top: 20px;
-    color: #666;
-  }
-  
-  .signup-container a {
-    color: #1c92d2;
-    text-decoration: none;
-    font-weight: bold;
-  }
-  
-  .signup-container a:hover {
-    text-decoration: underline;
-  }
-  
-  /* Animation */
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-      transform: translateY(-20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  
+}
