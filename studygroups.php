@@ -80,7 +80,7 @@
         </tbody>
       </table>
       <div class="button-wrapper">
-      <a href="studygroup_create.php"><button class="studygroupcreateButton">Create Study Group</button></a>
+      <a href="studygroup_create.php"><button class="studygroupButton">Create Study Group</button></a>
       </div>
   
       <script src="app.js"></script>

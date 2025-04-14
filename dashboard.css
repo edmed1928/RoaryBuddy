@@ -49,7 +49,7 @@
 }
 
 
-.studygroupcreateButton {
+.studygroupButton {
     display: inline-block;
     background: linear-gradient(135deg, #B6862C, #e6b14c);
     color: #fff;
@@ -68,15 +68,16 @@
     display: flex;
     justify-content: center;  /* centers horizontally */
     margin-top: 30px;         /* add space above if needed */
+    transform: translateY(0px);
   }
   
-  .studygroupcreateButton:hover {
+  .studygroupButton:hover {
     background: linear-gradient(135deg, #8b641f, #d99e2e);
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
     transform: translateY(-2px);
   }
   
-  .studygroupcreateButton:active {
+  .studygroupButton:active {
     transform: translateY(0px);
     box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
   }

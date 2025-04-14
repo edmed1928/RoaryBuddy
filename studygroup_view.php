@@ -48,7 +48,9 @@ $group_id = (int) $_GET['group_id'];
 
     <form action="studygroup_add_event.php" method="POST">
         <input type="hidden" name="group_id" value="<?php echo htmlspecialchars($_GET['group_id']); ?>">
-        <button type="submit">Schedule a New Event</button>
+        <div class="button-wrapper">
+        <button class="studygroupButton" type="submit">Schedule a New Event</button>
+        </div>
     </form>
     
 
