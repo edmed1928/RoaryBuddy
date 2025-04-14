@@ -67,7 +67,7 @@ if ($stmt) {
       </div>
     </nav>
 
-<h2>Chat Room - Session <?= htmlspecialchars($session_id) ?></h2>
+<h2>💬Chat Room - Session <?= htmlspecialchars($session_id) ?></h2>
 <p><strong>Group users:</strong> <?= implode(', ', array_column($users_in_session, 'name')) ?></p>
 
 <!-- Flex layout starts -->

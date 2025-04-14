@@ -50,6 +50,14 @@ p {
     color: #081E3F;
 }
 
+.message img {
+    display: block;
+    margin-top: 5px;
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #ccc;
+}
+
 .message.you {
     background-color: #B6862C;
     color: white;

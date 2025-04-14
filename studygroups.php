@@ -54,15 +54,18 @@
                 <td><?php echo htmlspecialchars($study_group['created_by']); ?></td>
                 <td>
                 <div class="buttons">
-                <form action="includes/studygroup_join.inc.php" method="POST">
-                <input type="hidden" name="group_id" value="<?php echo htmlspecialchars($study_group['group_id']); ?>">
-               <button type="submit" class="action_btn Join">Join</button>
-               </form>
-               <?php if ($study_group['is_member']): ?>
-              <form action="studygroup_view.php" method="GET">
-                <input type="hidden" name="group_id" value="<?php echo htmlspecialchars($study_group['group_id']); ?>">
-                <button type="submit" class="action_btn View">View</button>
-              </form>
+            <?php if (!$study_group['is_member']): ?>
+            <form action="includes/studygroup_join.inc.php" method="POST">
+              <input type="hidden" name="group_id" value="<?php echo htmlspecialchars($study_group['group_id']); ?>">
+              <button type="submit" class="action_btn Join">Join</button>
+            </form>
+          <?php endif; ?>
+
+          <?php if ($study_group['is_member']): ?>
+            <form action="studygroup_view.php" method="GET">
+              <input type="hidden" name="group_id" value="<?php echo htmlspecialchars($study_group['group_id']); ?>">
+              <button type="submit" class="action_btn View">View</button>
+            </form>   
               
             <?php endif; ?>
                 </div>
