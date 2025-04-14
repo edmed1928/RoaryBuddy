@@ -66,16 +66,23 @@ if ($stmt) {
         </ul>
       </div>
     </nav>
-    <h2>Chat Room - Session <?= htmlspecialchars($session_id) ?></h2>
-    <p><strong>Participants:</strong> <?= implode(', ', array_column($users_in_session, 'name')) ?></p>
+
+<h2>Chat Room - Session <?= htmlspecialchars($session_id) ?></h2>
+<p><strong>Group users:</strong> <?= implode(', ', array_column($users_in_session, 'name')) ?></p>
+
+<!-- Flex layout starts -->
+<div class="chatroom__container">
+  
+  <!-- Left: Chatbox and Inputs -->
+  <div class="chat__left">
     <div id="chat-box"></div>
-   
+
     <!-- Message input form -->
     <form id="chat-form">
         <input type="text" id="message" placeholder="Type your message..." required>
         <input type="submit" value="Send">
     </form>
-   
+
     <!-- File upload form -->
     <div id="file-upload-area">
         <form id="file-form" enctype="multipart/form-data">
@@ -84,7 +91,17 @@ if ($stmt) {
         </form>
         <div id="upload-status"></div>
     </div>
-   
+  </div>
+
+  <!-- Right: Online Users -->
+  <div class="chat__right">
+    <div id="online-participants">
+      <h3>🟢 Online Participants</h3>
+      <ul id="online-list"></ul>
+    </div>
+  </div>
+</div>
+
     <script>
         function loadMessages() {
             $.get('load_message.php?session_id=<?= $session_id ?>', function(data) {
@@ -132,6 +149,23 @@ if ($stmt) {
                 });
             }
         });
+
+        function pingActivity() {
+    $.get('track_activity.php?session_id=<?= $session_id ?>');
+}
+
+function loadOnlineUsers() {
+    $.get('get_online_users.php?session_id=<?= $session_id ?>', function(data) {
+        let users = JSON.parse(data);
+        let html = users.map(name => `<li>${name}</li>`).join('');
+        $('#online-list').html(html || '<li>No one online 😔</li>');
+    });
+}
+
+setInterval(pingActivity, 5000);      // Ping every 5 seconds
+setInterval(loadOnlineUsers, 5000);   // Refresh online list
+pingActivity();
+loadOnlineUsers();
        
         setInterval(loadMessages, 2000); // refresh messages every 2 sec
         loadMessages();

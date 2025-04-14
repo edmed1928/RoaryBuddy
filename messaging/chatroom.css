@@ -3,24 +3,35 @@ body {
     background-color: #f4f4f4;
     margin: 0;
     padding: 0;
-  }
-  
-  h2 {
+}
+
+h2 {
     text-align: center;
     color: #081E3F;
     margin-top: 20px;
-  }
-  
-  p {
+}
+
+p {
     text-align: center;
     color: #333;
     margin-bottom: 20px;
-  }
-  
-  /* Chat box styling */
-  #chat-box {
-    max-width: 800px;
+}
+
+/* Chat room container styling (Flexbox layout) */
+.chatroom__container {
+    display: flex;
+    max-width: 1100px;
     margin: 0 auto;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Chatbox styling */
+.chat__left {
+    flex: 2;  /* Left side will take up more space */
+}
+
+#chat-box {
     background-color: #fff;
     border: 2px solid #081E3F;
     border-radius: 10px;
@@ -28,41 +39,41 @@ body {
     overflow-y: scroll;
     padding: 15px;
     box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  /* Messages */
-  .message {
+}
+
+/* Messages */
+.message {
     margin-bottom: 12px;
     padding: 8px 12px;
     border-radius: 8px;
     background-color: #f0f7ff;
     color: #081E3F;
-  }
-  
-  .message.you {
+}
+
+.message.you {
     background-color: #B6862C;
     color: white;
     text-align: right;
-  }
-  
-  /* Chat input */
-  #chat-form {
+}
+
+/* Chat input form */
+#chat-form {
     max-width: 800px;
     margin: 20px auto;
     display: flex;
     gap: 10px;
     justify-content: center;
-  }
-  
-  #chat-form input[type="text"] {
+}
+
+#chat-form input[type="text"] {
     flex: 1;
     padding: 10px 15px;
     border: 2px solid black;
     border-radius: 999px;
     font-size: 1rem;
-  }
-  
-  #chat-form input[type="submit"] {
+}
+
+#chat-form input[type="submit"] {
     background-color: #B6862C;
     color: white;
     border: none;
@@ -71,14 +82,14 @@ body {
     cursor: pointer;
     font-weight: 600;
     transition: background-color 0.3s ease;
-  }
-  
-  #chat-form input[type="submit"]:hover {
+}
+
+#chat-form input[type="submit"]:hover {
     background-color: #081E3F;
-  }
-  
-  /* File Upload */
-  #file-upload-area {
+}
+
+/* File upload area */
+#file-upload-area {
     max-width: 800px;
     margin: 20px auto;
     padding: 15px;
@@ -86,13 +97,13 @@ body {
     border: 2px dashed #081E3F;
     border-radius: 10px;
     text-align: center;
-  }
-  
-  #file-upload-area input[type="file"] {
+}
+
+#file-upload-area input[type="file"] {
     margin-bottom: 10px;
-  }
-  
-  #file-upload-area button {
+}
+
+#file-upload-area button {
     background-color: #B6862C;
     color: white;
     border: none;
@@ -101,20 +112,56 @@ body {
     font-weight: bold;
     cursor: pointer;
     transition: background-color 0.3s ease;
-  }
-  
-  #file-upload-area button:hover {
+}
+
+#file-upload-area button:hover {
     background-color: #081E3F;
-  }
-  
-  /* Upload status */
-  #upload-status {
+}
+
+/* Upload status */
+#upload-status {
     margin-top: 10px;
     color: #333;
-  }
-  
-  /* Participant list */
-  strong {
+}
+
+/* Participant list */
+strong {
     color: #B6862C;
-  }
-  
+}
+
+/* Online participants list styling */
+.chat__right {
+    flex: 1;  /* Right side will take up less space */
+    max-width: 250px;  /* Set a max-width to control the size of the box */
+    background-color: #ffffff;
+    border: 2px solid #081E3F;
+    border-radius: 10px;
+    padding: 15px;
+    height: 300px;
+    overflow-y: auto;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+.chat__right h3 {
+    text-align: center;
+    color: #081E3F;
+    margin-bottom: 10px;
+}
+
+#online-participants {
+    text-align: center;
+}
+
+#online-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    color: #081E3F;
+    font-weight: 600;
+}
+
+#online-list li {
+    padding: 8px;
+    border-bottom: 1px solid #eee;
+    color: #333;
+}
