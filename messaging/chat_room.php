@@ -103,12 +103,20 @@ if ($stmt) {
 </div>
 
     <script>
-        function loadMessages() {
-            $.get('load_message.php?session_id=<?= $session_id ?>', function(data) {
-                $('#chat-box').html(data);
-                $('#chat-box').scrollTop($('#chat-box')[0].scrollHeight);
-            });
+      function loadMessages() {
+        $.get('load_message.php?session_id=<?= $session_id ?>', function(data) {
+        $('#chat-box').html(data);
+        const chatBox = document.getElementById('chat-box');
+        
+        // Check if the user is currently at the bottom of the chat
+        const isAtBottom = chatBox.scrollHeight - chatBox.scrollTop === chatBox.clientHeight;
+        
+        // If they were at the bottom, scroll to the bottom after new messages are loaded
+        if (isAtBottom) {
+            chatBox.scrollTop = chatBox.scrollHeight;
         }
+    });
+    }
        
         // Text message submission
         $('#chat-form').on('submit', function(e) {
